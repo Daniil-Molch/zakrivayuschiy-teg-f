@@ -15,6 +15,93 @@
 */
 
 .page {
+  color: var(--accent-color, #000);
+  font-family: var(--main-font, "Inter-Variable", sans-serif);
+  background-color: var(--background-color, #fff);
+  background-image: var(--background-gradient);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-variation-settings: "wght" var(--main-font-weight);
 }
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid currentColor;
+  background-color: var(--background-color, #fff);
+  font-family: var(--accent-font, "PressStart2P-Regular");
+  text-transform: uppercase;
+  max-inline-size: 700px;
+  margin: 102px auto;
+}
+
+.title {
+  margin: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) 0 20px 0;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  text-decoration: none;
+}
+
+.header-title {
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+}
+
+.header__theme-menu {
+  margin-block: 25px;
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding-inline-start: 14px;
+}
+
+.theme-menu__button {
+  position: relative;
+  border: none;
+  text-transform: inherit;
+  background-color: transparent;
+  transition: opacity 0.3s ease;
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
+}
+
+.theme-menu__button::after {
+  content: "";
+  display: block;
+  margin-block-start: 2px;
+  opacity: 0.6;
+  background-color: currentColor;
+  transition: transform 0.3s;
+  transform: scaleX(0);
+  transform-origin: left;
+  block-size: 2px;
+}
+
+.theme-menu__button:focus-visible {
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.theme-menu__button:disabled::before {
+  content: "▶";
+  position: absolute;
+  animation: arrowMove 0.5s ease-in-out infinite alternate;
+  inset-inline-start: -20px;
+}
+

@@ -1,0 +1,248 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+}
+
+.article {
+  margin: 0 auto 50px auto;
+  border: 2px solid currentColor;
+  background-color: var(--background-color, #fff);
+  max-inline-size: 700px;
+}
+
+.article:not(:last-of-type) {
+  margin-bottom: 50px;
+}
+
+.section {
+  border-block-end: 2px solid currentColor;
+  padding: 4px 10px;
+  font-size: inherit;
+  line-height: normal;
+  font-variation-settings: "wght" var(--title-font-weight);
+}
+
+.picture {
+  position: relative;
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+  inline-size: 100%;
+}
+
+.contrast {
+  filter: contrast(200%);
+}
+
+.saturate {
+  filter: saturate(30%);
+}
+
+.invert {
+  filter: invert(75%);
+}
+
+.sepia {
+  filter: sepia(60%);
+}
+
+.opacity {
+  filter: opacity(25%);
+}
+
+.blur {
+  filter: blur(5px);
+}
+
+.brightness {
+  filter: brightness(0.4);
+}
+
+.grayscale {
+  filter: grayscale(50%);
+}
+
+.hue-rotate {
+  filter: hue-rotate(90deg);
+}
+
+/* filter: url(resources.svg);
+
+filter: drop-shadow(16px 16px 20px blue);
+filter: grayscale(50%); */
+
+.picture-label {
+  position: relative;
+  overflow: hidden;
+}
+
+.label {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.5;
+  font-family: var(--accent-font, "PressStart2P-Regular", fantasy);
+  font-size: 14px;
+  line-height: normal;
+  text-transform: uppercase;
+  text-shadow: -1px 0 var(--text-stroke-color, #fff),
+    0 1px var(--text-stroke-color, #fff), 1px 0 var(--text-stroke-color, #fff),
+    0 -1px var(--text-stroke-color, #fff);
+  inset-inline-end: 13px;
+  inset-block-start: 24px;
+  mix-blend-mode: hard-light;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: auto min-content;
+  column-gap: 6px;
+  border-block-start: 2px solid currentColor;
+  padding: 25px;
+}
+
+.text {
+  grid-column: span 2;
+}
+
+.text:last-of-type {
+  margin-block-start: 27px;
+  margin-block-end: 25px;
+}
+
+.card__like-button {
+  position: relative;
+  grid-column: 2;
+  justify-self: end;
+  border: 2px solid currentColor;
+  padding: 9px 17px;
+  overflow: auto;
+  font-family: var(--accent-font, "PressStart2P", fantasy);
+  font-size: 14px;
+  text-transform: inherit;
+  background: var(--background-color, #fff);
+  line-height: 0.9;
+  background-color: transparent;
+  transition: box-shadow 0.3s;
+  min-inline-size: 130px;
+}
+
+.like-icon {
+  width: 39px;
+  height: 36px;
+}
+
+.card__icon-button {
+  grid-column: 1;
+  justify-self: end;
+  align-self: center;
+  border: 2px solid transparent;
+  background-color: transparent;
+  transition: border-color 0.3s;
+}
+
+.card__icon-button:focus-visible {
+  border-color: currentColor;
+}
+
+.button__text {
+  position: relative;
+  z-index: 1;
+  color: var(--buttons-text-color, #fff);
+  mix-blend-mode: difference;
+}
+
+.card__like-button:focus-visible .button-save:focus-visible {
+  box-shadow: 2px 2px 0 currentColor;
+}
+
+.card__like-button::before,
+.button-save::before,
+.modal__button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid currentColor;
+  background-color: currentColor;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(-100%);
+  transform-origin: left;
+}
+
+.card__like-button:hover::before,
+.button-save:hover::before,
+.modal__button:hover::before {
+  transform: translateX(0%);
+}
+
+.button-save {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 54px auto clamp(6.375rem, 6.309rem + 0.2817vw, 6.5625rem);
+  border: 2px solid currentColor;
+  padding: 15px 20px;
+  overflow: auto;
+  background-color: var(--background-color, #fff);
+  transition: box-shadow 0.3s;
+}
+
+.button__icon {
+  width: 21px;
+  height: 21px;
+  color: var(--buttons-text-color, #fff);
+  mix-blend-mode: difference;
+}
+
+
+.modal {
+  border: 2px solid currentColor;
+  padding: 30px;
+  color: var(--accent-color, #000);
+  font-family: var(--accent-font, 'PressStart2P-Regular', fantasy);
+  background-color: var(--background-color, #fff);
+  max-inline-size: 357px;
+}
+
+.modal[open] {
+  display: grid;
+  grid-template-areas:
+    "floppy text"
+    "form form";
+  align-items: center;
+  gap: 30px 20px;
+}
+
+.modal::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
+
+.modal .button__icon {
+  grid-area: floppy;
+  width: 39px;
+  height: 39px;
+}
+
+.dialog-content {
+  grid-area: text;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.form {
+  grid-area: form;
+}
+
+.modal__button {
+  position: relative;
+  border: 2px solid currentColor;
+  padding: 9px 17px;
+  overflow: auto;
+  line-height: 0.9;
+  background-color: transparent;
+  inline-size: 100%;
+}
