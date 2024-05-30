@@ -16,7 +16,7 @@
 
 .page {
   color: var(--accent-color, #000);
-  font-family: var(--main-font, "Inter-Variable", sans-serif);
+  font-family: var(--main-font, "Inter-Variable"), sans-serif;
   background-color: var(--background-color, #fff);
   background-image: var(--background-gradient);
   background-position: center;
@@ -33,10 +33,11 @@
   align-items: center;
   border: 2px solid currentColor;
   background-color: var(--background-color, #fff);
-  font-family: var(--accent-font, "PressStart2P-Regular");
+  font-family: var(--accent-font, "PressStart2P-Regular"), fantasy;
   text-transform: uppercase;
   max-inline-size: 700px;
-  margin: 102px auto;
+  margin: 95px auto;
+  line-height: normal;
 }
 
 .title {
@@ -56,13 +57,14 @@
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  gap: 7px;
-  padding-inline-start: 14px;
+  gap: 8px;
+  padding-inline-start: 20px;
 }
 
 .theme-menu__button {
   position: relative;
   border: none;
+  font-size: 14px;
   text-transform: inherit;
   background-color: transparent;
   transition: opacity 0.3s ease;

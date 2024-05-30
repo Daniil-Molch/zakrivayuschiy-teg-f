@@ -76,12 +76,6 @@
 }
 
 @keyframes sparks {
-  /* from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  } */
   from {
     fill: transparent;
   }
@@ -91,11 +85,14 @@
   }
 }
 
-@keyframes heart {
-  from {
-    transform: scale(1);
+@keyframes heartScale {
+  0% {
+    scale:1;
   }
-  to {
-    transform: scale(1.5);
+  95% {
+    scale: 1.5;
+  }
+  100% {
+    scale: 1;
   }
 }
