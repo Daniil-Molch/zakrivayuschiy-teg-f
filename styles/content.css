@@ -93,13 +93,12 @@
   grid-template-columns: auto min-content;
   column-gap: 6px;
   border-block-start: 2px solid currentColor;
-  padding: 29px  25px 20px 25px;
+  padding: 29px 25px 20px 25px;
 }
 
 .text {
   grid-column: span 2;
-  /* line-height: 116%; */
-  line-height: calc(21/18);
+  line-height: calc(21 / 18);
 }
 
 .text:not(:last-of-type) {
@@ -109,17 +108,6 @@
 .text:last-of-type {
   margin-block-end: 25px;
 }
-
-/* .test-div {
-display: flex;
-gap:12px;
-
-}
-
-.test-div > :first-child {
-  margin-left: auto;
-
-} */
 
 .card__like-button {
   position: relative;
@@ -136,7 +124,7 @@ gap:12px;
   background-color: transparent;
   transition: box-shadow 0.3s;
   min-inline-size: 130px;
-} 
+}
 
 .like-icon {
   block-size: 36px;
@@ -204,10 +192,7 @@ gap:12px;
 
 .button-save {
   position: relative;
-  /* display: flex;
-  align-items: center;
-  gap: 8px;*/
-  margin: 50px auto clamp(6.375rem, 6.309rem + 0.2817vw, 6.5625rem); 
+  margin: 50px auto clamp(6.375rem, 6.309rem + 0.2817vw, 6.5625rem);
   border: 2px solid currentColor;
   padding: 15px 20px;
   overflow: auto;
@@ -243,80 +228,6 @@ gap:12px;
 .modal__button:hover::before {
   transform: translateX(0%);
 }
-
-/* .button__icon {
-
-}
-
-.modal__icon {
-  flex-shrink: 0;
-  inline-size: 39px;
-  block-size: 39px;
-  color: var(--buttons-text-color, #fff);
-  mix-blend-mode: difference;
-}
-
-.modal {
-  border: 2px solid currentColor;
-  padding: 25px 30px;
-  color: var(--accent-color, #000000);
-  font-family: var(--accent-font, "PressStart2P-Regular"), fantasy;
-  line-height: 1.5;
-  text-transform: uppercase;
-  background: var(--background-color, #ffffff);
-  max-inline-size: 355px;
-}
-
-.modal[open] {
-  /* display: grid;
-  grid-template-areas:
-    "floppy text"
-    "form form";
-  align-items: center;
-  gap: 30px 20px; */
-  /* display: grid;
-  grid-template-rows: repeat(2, min-content);
-  gap: 30px;
-}
-
-.modal__content {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.modal::backdrop {
-  background-color: rgb(0 0 0 / 0.75);
-}
-
-.modal .button__icon {
-  grid-area: floppy;
-  width: 36px;
-  height: 39px;
-}
-
-.dialog-content {
-  grid-area: text;
-  line-height: 1.5;
-  text-transform: uppercase;
-}
-
-.form {
-  grid-area: form;
-}
-
-.modal__button {
-  position: relative;
-  border: 2px solid currentColor;
-  padding: 9px 17px;
-  overflow: auto;
-  line-height: 0.9;
-  background-color: transparent;
-  inline-size: 100%;
-} */ 
-
-
-
 
 .modal {
   border: 2px solid var(--accent-color, #000000);
@@ -355,13 +266,12 @@ gap:12px;
   inline-size: 100%;
 }
 
- .button__text {
+.button__text {
   position: relative;
   z-index: 1;
   color: var(--buttons-text-color, #fff);
   mix-blend-mode: difference;
- 
-} 
+}
 
 .button__text,
 .button__icon {
@@ -375,26 +285,13 @@ gap:12px;
   inline-size: 22px;
 }
 
-
 .like-icon {
   flex-shrink: 0;
   block-size: 36px;
   inline-size: 39px;
 }
 
-
-/* @media (width <= 425px) {
-  .save-button {
-    flex-direction: column;
-  }
-
-  .floppy-icon {
-    width: 28px;
-    height: 28px;
-  }
-}  */
-
- @media (width < 376px) {
+@media (width < 376px) {
   .modal {
     padding: 28px 34px 28px 40px;
     max-inline-size: 340px;
@@ -408,4 +305,4 @@ gap:12px;
     block-size: 28px;
     inline-size: 28px;
   }
-} 
+}
