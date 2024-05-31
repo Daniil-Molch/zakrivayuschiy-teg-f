@@ -93,7 +93,7 @@
   grid-template-columns: auto min-content;
   column-gap: 6px;
   border-block-start: 2px solid currentColor;
-  padding: 25px;
+  padding: 29px  25px 20px 25px;
 }
 
 .text {
@@ -109,6 +109,17 @@
 .text:last-of-type {
   margin-block-end: 25px;
 }
+
+/* .test-div {
+display: flex;
+gap:12px;
+
+}
+
+.test-div > :first-child {
+  margin-left: auto;
+
+} */
 
 .card__like-button {
   position: relative;
@@ -360,8 +371,8 @@
 
 .button__icon {
   flex-shrink: 0;
-  block-size: 39px;
-  inline-size: 39px;
+  block-size: 22px;
+  inline-size: 22px;
 }
 
 
@@ -383,13 +394,13 @@
   }
 }  */
 
- @media (width < 375px) {
+ @media (width < 376px) {
   .modal {
     padding: 28px 34px 28px 40px;
     max-inline-size: 340px;
   }
 
-  .button--save {
+  .button-save {
     flex-direction: column;
   }
 
